@@ -1,0 +1,42 @@
+:root {
+    --cor-fundo: #f4f7fa;
+    --cor-texto: hsl(200, 20%, 18%);
+    --cor-principal: #4ee94e;
+    --cor-destaque: #b8860b;
+}
+
+body{
+    margin: 0;
+    background: var(--cor-fundo);
+    color:var(--cor-texto);
+    font-family: Arial, Helvetica, sans-serif;
+     line-height: 1.6; /*Distancia entre as palavras  */
+    /* letter-spacing: 1px; A distância de uma letra para outra.*/
+}
+header {
+    padding: 20px;
+    background: var(--cor-principal);
+    color:var(--cor-texto);
+    text-align: center;
+
+}
+nav {
+    display: flex;  /*Modo de exibir, "Flex" significa que pode comandar a exibição de muitas maneiras*/
+    justify-content: center; 
+    flex-wrap: wrap; /* é uma propriedade que define se os itens de um contêiner flexível devem ficar em uma única linha ou se podem quebrar e passar para as linhas seguintes quando não houver mais espaço.*/
+    gap: 10px; /*Espaço entre os elementos*/
+}
+
+nav a {
+    color: var(--cor-texto);
+    padding: 10px; /*padding = Preenchimento */
+    background-color: #98fb98;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all .3s;
+}
+nav a:hover{
+    /* hover -> a ação vai ficar com o passar do mouse*/
+    background: var(--cor-fundo);
+    padding: 12px;
+}
