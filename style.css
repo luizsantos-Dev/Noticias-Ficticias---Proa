@@ -1,42 +1,135 @@
 :root {
-    --cor-fundo: #f4f7fa;
-    --cor-texto: hsl(200, 20%, 18%);
-    --cor-principal: #4ee94e;
-    --cor-destaque: #b8860b;
+  --cor-fundo: #f4f7fa;
+  --cor-texto: hsl(200, 20%, 18%);
+  --cor-principal: #4ee94e;
+  --cor-destaque: #b8860b;
+  --curvatura: 10px 0px 10px 0px;
+  --sombra-padrao: 15px 7px 20px 5px rgba(0, 0, 0, 0.61);
 }
 
-body{
-    margin: 0;
-    background: var(--cor-fundo);
-    color:var(--cor-texto);
-    font-family: Arial, Helvetica, sans-serif;
-     line-height: 1.6; /*Distancia entre as palavras  */
-    /* letter-spacing: 1px; A distância de uma letra para outra.*/
+.logo {
+    max-width: 100px;
+}
+
+.super-bar{
+    height: 2vh;
+    background: #45c545;
+}
+
+body {
+  margin: 0;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6; /*Distancia entre as palavras  */
+  /* letter-spacing: 1px; A distância de uma letra para outra.*/
 }
 header {
-    padding: 20px;
-    background: var(--cor-principal);
-    color:var(--cor-texto);
-    text-align: center;
-
+  padding: 20px;
+  background: var(--cor-principal);
+  color: var(--cor-texto);
+  text-align: center;
 }
 nav {
-    display: flex;  /*Modo de exibir, "Flex" significa que pode comandar a exibição de muitas maneiras*/
-    justify-content: center; 
-    flex-wrap: wrap; /* é uma propriedade que define se os itens de um contêiner flexível devem ficar em uma única linha ou se podem quebrar e passar para as linhas seguintes quando não houver mais espaço.*/
-    gap: 10px; /*Espaço entre os elementos*/
+  display: flex; /*Modo de exibir, "Flex" significa que pode comandar a exibição de muitas maneiras*/
+  justify-content: center;
+  flex-wrap: wrap; /* é uma propriedade que define se os itens de um contêiner flexível devem ficar em uma única linha ou se podem quebrar e passar para as linhas seguintes quando não houver mais espaço.*/
+  gap: 10px; /*Espaço entre os elementos*/
 }
 
 nav a {
-    color: var(--cor-texto);
-    padding: 10px; /*padding = Preenchimento */
-    background-color: #98fb98;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all .3s;
+  color: var(--cor-texto);
+  padding: 10px; /*padding = Preenchimento */
+  background-color: #98fb98;
+  border-radius: var(--curvatura);
+  text-decoration: none;
+  transition: all 0.3s; /*mudanças suaves de um estado para outro em um elemento da web, em vez de uma alteração brusca ou instantânea.*/
 }
-nav a:hover{
-    /* hover -> a ação vai ficar com o passar do mouse*/
+nav a:hover {
+  /* hover -> a ação vai ficar com o passar do mouse*/
+  background: var(--cor-fundo);
+  padding: 12px;
+}
+aside{
+    padding: 2vh 2vw;
     background: var(--cor-fundo);
-    padding: 12px;
+    border-left: 3px solid var(--cor-destaque);
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: var(--sombra-padrao);
+}
+main{
+      margin: 30px;
+  background-color: #d0fcd0;
+  box-shadow: var(--sombra-padrao);
+  border-radius: var(--curvatura);
+  padding: 1vw;
+}
+.main-flex {
+  margin: 30px;
+  background-color: #d0fcd0;
+  box-shadow: var(--sombra-padrao);
+  border-radius: var(--curvatura);
+  padding: 1vw;
+  display: flex;
+  flex-direction: row-reverse;
+    align-items: flex-start;
+}
+main p{
+    text-align: justify;
+    color: var(--cor-texto);
+}
+h1, h2,h3 {
+  color: var(--cor-texto);
+}
+
+article {
+  padding: 28px;
+  border-left: 5px solid var(--cor-destaque);
+  border-radius: var(--curvatura);
+  background: white;
+  box-shadow: var(--sombra-padrao);
+  display: flex;
+  flex-direction: column;
+}
+.index{
+padding: 28px;
+  border-left: 5px solid var(--cor-destaque);
+  border-radius: var(--curvatura);
+  background: white;
+  box-shadow: var(--sombra-padrao);
+  display: flex;
+  flex-direction: column;
+}
+article p {
+  max-width: 75ch;
+  margin: 0 0 22px;
+  font-size: 1.05rem;
+}
+
+.texto-destaque {
+    color: var(--cor-destaque);
+    font-weight: bold;
+}
+
+footer {
+    padding: 25px 20px; /*Doís valores. O 1º funciona para o topo e para baixo, enquanto o 2º funciona para os lados.*/
+    background: var(--cor-principal) ;
+    color: white;
+    text-align: center; 
+    color: var(--cor-texto);
+    width: 100%;
+}  
+
+footer p{
+    max-width: 700px;
+    margin: 0 auto 15px;
+    
+}
+
+footer nav{
+display: flex; /*Modo de exibir, "Flex" significa que pode comandar a exibição de muitas maneiras*/
+  justify-content: center;
+  flex-wrap: wrap; /* é uma propriedade que define se os itens de um contêiner flexível devem ficar em uma única linha ou se podem quebrar e passar para as linhas seguintes quando não houver mais espaço.*/
+  gap: 10px; /*Espaço entre os elementos*/
 }
