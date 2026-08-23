@@ -64,6 +64,7 @@ main{
   box-shadow: var(--sombra-padrao);
   border-radius: var(--curvatura);
   padding: 1vw;
+  text-align: center;
 }
 .main-flex {
   margin: 30px;
@@ -100,6 +101,24 @@ padding: 28px;
   box-shadow: var(--sombra-padrao);
   display: flex;
   flex-direction: column;
+  height: 80vh;
+  align-items: center;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  background: var(--cor-principal);
+  border-radius: var(--curvatura);
+  box-shadow: var(--sombra-padrao);
+  border: var(--curvatura);
+  border-left: 5px solid var(--cor-destaque);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.img_index{
+  padding: 120px;
+  
 }
 article p {
   max-width: 75ch;
